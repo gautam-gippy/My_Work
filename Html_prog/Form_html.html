@@ -1,0 +1,104 @@
+<html>
+   
+   <head>
+      <title>Form Validation</title>
+      
+      <script type="text/javascript">
+         <!--
+             function validate()
+      {
+      
+         if( document.myForm.Name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+         
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.EMail.value))  
+ 	 {  
+    	    return (true)  
+  	 }  
+	else
+	{
+    	    alert("You have entered an invalid email address!")  
+    	    return (false)
+	}  
+       	if( document.myForm.Address.value == "" )
+         {
+            alert( "Please provide your Address!" );
+            document.myForm.Address.focus() ;
+            return false;
+         }
+                  
+         if( document.myForm.Age.value == "-1" )
+         {
+            alert( "Please provide your Age!" );
+            return false;
+         }
+         return( true );
+      }
+         //-->
+      </script>
+      
+   </head>
+   
+   <body>
+      <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
+         <table align="center" cellspacing="2" cellpadding="2" border="1">
+            
+            <tr>
+               <td align="right">Name</td>
+               <td><input type="text" name="Name" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">EMail</td>
+               <td><input type="text" name="EMail" /></td>
+            </tr>
+                   
+            <tr>
+               <td align="right">Address</td>
+               <td><textarea name="Address" rows="4" cols="30"></textarea></td>
+            </tr>
+	    <tr>
+		<td align="right">Gender</td>
+		<td>
+	      <input type="radio" name="Gender" value="Male" checked> Male
+  	      <input type="radio" name="Gender" value="Female"> Female
+		</td>
+	    </tr>
+            <tr>
+               <td align="right">Age</td>
+               <td>
+                  <select name="Age">
+                        <option value="-1" selected>[choose your age]</option>
+                        <option value="1">1</option>
+		        <option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align="right"></td>
+               <td><input type="submit" value="Submit" /></td>
+            </tr>
+            
+         </table>
+      </form>
+      
+   </body>
+</html>
