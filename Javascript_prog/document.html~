@@ -1,0 +1,13 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+	NamedNodeMap n;
+	var c=document.getElementById("body");
+	document.write(c.NamedNodeMap);
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>

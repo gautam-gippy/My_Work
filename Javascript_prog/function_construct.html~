@@ -1,0 +1,23 @@
+<html>
+<head>
+
+<script type="text/javascript">
+<!--
+	var x=new Function("a","b", "return a*b");
+	function second()
+	{
+		//var a=m;
+		//var b=n;
+		var result=x(3,4);
+		document.write(result);
+	}
+//-->
+</script>
+</head>
+<body>
+Here is the Fuction Constructor<br/><br/>
+<form>
+<input type="button" onclick="second()" value="Multiplication">
+</form>
+</body>
+</html>

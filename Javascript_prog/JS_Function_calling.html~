@@ -1,0 +1,10 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type = "text/javascript" src="/home/khushbu/Desktop/Javascript_prog/function1.js"></script>
+Click the button
+<input type="button" onClick=sayHello() value="say it">
+</body>
+</html>

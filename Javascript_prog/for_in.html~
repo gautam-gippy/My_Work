@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type = "text/javascript" >
+var linebreak="<br/>"
+var prop;
+document.write("Navigation object properties")
+for(prop in navigator) {
+	document.write(prop);
+	document.write(linebreak)
+}
+</script>
+</body>
+</html>
