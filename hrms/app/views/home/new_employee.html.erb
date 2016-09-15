@@ -1,0 +1,13 @@
+ 
+      
+   
+     <%= form_for @form,url: {action: "new_employee"}, html: {class: "Home"} do |f| %>
+     <%= f.text_field :name%>
+     <%= f.text_field :email%>
+     <%= f.text_area :address, size: "60*12"%>
+     <%= f.radio_button(:gender, 'male')%>
+     <%= f.label_tag(:gender_male,'Male')%>
+     <%= f.radio_button(:gender, 'female')%>
+     <%= f.label_tag(:gender_female,'Female')%>
+     <%= f.select_tag(:age, option_for_select(['choose your age',-1],['1',1],['2',2],['3',3],['4',4],['5',5]['6',6],['7',7],['8',8],['9',9],['10',10],['11',11],['12',12],['13',13],['14',14],['15',15]))%>
+ 
