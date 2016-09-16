@@ -14,10 +14,18 @@ class HomeController < ApplicationController
     end
 
     def test
-      
+     Employee.new(name: params[:Name], email: params[:EMail], address: params[:Address],gender: params[:Gender],age: params[:Age]).save
+     redirect_to root_path
     end
     def new_employee
-        Employee.create(:name=>params[:name],:email=>params[:email],:address=>params[:address],:gender=>params[:gender],:age=>params[:age])
+        
+        @empl = Employee.new(name: params[:name], email: params[:email], address: params[:address],gender: params[:gender],age: params[:age])
+          if(@empl == nil)
+            puts "No parameters"
+              
+          else
+            @empl.save
+          end 
     end
     def all_employees
 

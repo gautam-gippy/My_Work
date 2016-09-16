@@ -1,13 +1,53 @@
- 
-      
+    
    
-     <%= form_for @form,url: {action: "new_employee"}, html: {class: "Home"} do |f| %>
-     <%= f.text_field :name%>
-     <%= f.text_field :email%>
-     <%= f.text_area :address, size: "60*12"%>
-     <%= f.radio_button(:gender, 'male')%>
-     <%= f.label_tag(:gender_male,'Male')%>
-     <%= f.radio_button(:gender, 'female')%>
-     <%= f.label_tag(:gender_female,'Female')%>
-     <%= f.select_tag(:age, option_for_select(['choose your age',-1],['1',1],['2',2],['3',3],['4',4],['5',5]['6',6],['7',7],['8',8],['9',9],['10',10],['11',11],['12',12],['13',13],['14',14],['15',15]))%>
- 
+     <%= form_for :emp do |f| %>
+     <table align="center" cellspacing="10" cellpadding="3">
+       <tr>
+         <td>
+           Name: 
+         </td>
+         <td>
+           <%= f.text_field :name%><br/>
+         </td>
+       </tr>
+       <tr>
+         <td>
+           E-Mail: 
+         </td>
+         <td>
+           <%= f.text_field :email%><br/>
+         </td>>
+     </tr>
+     <tr>
+       <td>
+         Address: 
+       </td>
+       <td>
+         <%= f.text_area :address, size: "30*15"%><br/>
+       </td>
+     </tr>
+     <tr>
+       <td>
+         Gender: 
+       </td>
+       <td>
+         <%= f.radio_button(:gender, 'male')%>Male
+     
+         <%= f.radio_button(:gender, 'female')%>Female
+       </td>
+     </tr>
+     <tr>
+       <td>
+         Age:
+       </td> 
+       <td>
+         <%= f.select(:age, options_for_select([[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15]])) %><br/>
+       </td>
+     </tr>
+     <tr><td></td>
+       <td align="left">
+     <%= f.submit %>
+       </td>
+     </tr>
+     </table>
+ <% end %>

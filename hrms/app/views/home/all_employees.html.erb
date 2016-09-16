@@ -1,0 +1,53 @@
+
+
+
+<table align="center" cellpadding="4" cellspacing="20" style="border:1px solid black;">
+  <tr>
+  	<td align="center">
+  		ID
+  	</td>
+  	<td>
+  		Name
+  	</td>
+  	<td>
+  		E-Mail
+  	</td>
+  	<td>
+  		Address
+  	</td>
+  	<td>
+  		Gender
+  	</td>
+  	<td>
+  		Age
+  	</td>
+  </tr>
+	
+
+<% Employee.find_each do |empl| %>
+ <% unless !empl.id %>
+	
+
+<tr>
+	<td>
+		<%= empl.id %>
+	</td>
+	<td>
+		<%= empl.name%>
+	</td>
+	<td>
+		<%= empl.email%>
+	</td>
+	<td>
+		<%= empl.address%>
+	</td>
+	<td>
+		<%= empl.gender%>
+	</td>
+	<td>
+		<%= empl.age%>
+	</td>
+</tr>
+ <% end %>
+<% end %>
+</table>
