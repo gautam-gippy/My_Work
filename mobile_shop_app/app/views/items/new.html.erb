@@ -1,0 +1,37 @@
+
+<%= form_for :item do |e|%>
+  
+  
+
+
+<table align="center" style="border: 2px solid black" cellpadding="5" cellspacing="20">
+  <% if @item.errors.any? %>
+        <div id="error_explanation">
+
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this msg from being saved:</h2>
+
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+	<tr>
+		<td>Item Name</td>
+		<td><%= text_field :item, :name%></td>
+	</tr>
+	<tr>
+		<td>Cost Price</td>
+		<td><%= text_field :item, :cost_price%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= e.submit %></td>
+	</tr>
+</table>
+
+
+<% end %>
+
+<%= link_to 'Back', items_path %>

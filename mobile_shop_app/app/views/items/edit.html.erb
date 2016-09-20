@@ -1,0 +1,25 @@
+<%= form_for @item do |e|%>
+<table align="center" style="border: 2px solid black" cellpadding="5" cellspacing="20">
+	<tr>
+		<td>Item Name</td>
+		<td><%= e.text_field :name%></td>
+	</tr>
+	<tr>
+		<td>Stock</td>
+		<td><%= e.text_field :stock%></td>
+	</tr>
+	<tr>
+		<td>Cost Price</td>
+		<td><%= e.text_field :cost_price%></td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td><%= e.submit "update" %></td>
+	</tr>
+</table>
+
+
+<% end %>
+
+<%= link_to 'Back', items_path %>

@@ -1,0 +1,25 @@
+<p id="notice"> <%= notice %></p>
+<table align="center">
+	
+	<thead>
+		<tr>
+			
+			<th> Name</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<% @items.each do |item| %>
+		<tr>
+			
+			<td><%= item.name %></td>
+			
+			<td><%= link_to "show", item %></td>
+			<td><%= link_to 'Remove', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to "Edit",edit_item_path(item) %></td>
+			
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<td><%= link_to "Add New Item", new_item_path%></td>
